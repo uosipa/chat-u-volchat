@@ -1,0 +1,29 @@
+package com.uosipa.chatuvolchat.protocol.room;
+
+import "Interop.proto";
+import "Stuff.proto";
+
+message ChatMessage {
+    message Request {
+        required int32 room_id = 1;
+        required string message = 2;
+    }
+
+    message Response {
+        required com.uosipa.chatuvolchat.protocol.stuff.Status status = 1;
+    }
+
+    message Notification {
+        required int32 room_id = 1;
+        required string name = 2;
+        required string message = 3;
+    }
+
+    optional Request request = 1;
+    optional Response response = 2;
+    optional Notification notification = 3;
+}
+
+extend MessageContainer {
+    optional ChatMessage chat_message = 11;
+}

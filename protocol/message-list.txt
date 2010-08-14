@@ -1,0 +1,4 @@
+code  message
+------------------------------------
+10    Lobby.ChooseRoom
+11    Room.ChatMessage

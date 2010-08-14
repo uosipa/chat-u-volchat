@@ -1,0 +1,13 @@
+package com.uosipa.chatuvolchat.protocol;
+
+message MessageContainer {
+    enum Type {
+        REQUEST = 0;
+        RESPONSE = 1;
+        NOTIFICATION = 2;
+    }
+
+    required Type type = 1;
+
+    extensions 10 to max; 
+}

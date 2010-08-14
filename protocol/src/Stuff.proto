@@ -1,0 +1,6 @@
+package com.uosipa.chatuvolchat.protocol.stuff;
+
+enum Status {
+    OK = 0;
+    FAIL = 1;
+}
